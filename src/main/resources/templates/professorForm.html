@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add New Professor</title>
+</head>
+<body>
+    <h1>Add New Professor</h1>
+    <form action="#" th:action="@{/professors}" th:object="${professor}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" th:field="*{name}" /><br/>
+        
+        <label for="department">Department:</label>
+        <input type="text" id="department" th:field="*{department}" /><br/>
+        
+        <label for="expertise">Expertise:</label>
+        <input type="text" id="expertise" th:field="*{expertise}" /><br/>
+        
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
